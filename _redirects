@@ -1,0 +1,73 @@
+# ============================================================
+# Cloudflare Pages _redirects  —  advancestore.co.uk
+#
+# TRAILING SLASH IS HANDLED BY FILE STRUCTURE, NOT BY RULES.
+# Every page is now  slug/index.html  →  CF Pages natively serves
+# it at  /slug/  and issues its own 308 for  /slug → /slug/.
+#
+# DO NOT ADD  /slug → /slug/  RULES HERE. That fights Cloudflare's
+# own normalisation and causes ERR_TOO_MANY_REDIRECTS.
+# ============================================================
+
+# ── Non-www → www ────────────────────────────────────────────
+https://advancestore.co.uk/*  https://www.advancestore.co.uk/:splat  301
+
+# ── Legacy /category/ URLs → new flat category URLs ──────────
+/category/charging-cables/*             /charging-cables/              301
+/category/charging-cables               /charging-cables/              301
+/category/chargers-wireless-charging/*  /chargers-wireless-charging/   301
+/category/chargers-wireless-charging    /chargers-wireless-charging/   301
+/category/car-chargers-accessories/*    /car-chargers-accessories/     301
+/category/car-chargers-accessories      /car-chargers-accessories/     301
+/category/power-banks/*                 /power-banks/                  301
+/category/power-banks                   /power-banks/                  301
+/category/headphones-earphones/*        /headphones-earphones/         301
+/category/headphones-earphones          /headphones-earphones/         301
+/category/bluetooth-speakers/*          /bluetooth-speakers/           301
+/category/bluetooth-speakers            /bluetooth-speakers/           301
+/category/audio-cables-adapters/*       /audio-cables-adapters/        301
+/category/audio-cables-adapters         /audio-cables-adapters/        301
+/category/hdmi-display-adapters/*       /hdmi-display-adapters/        301
+/category/hdmi-display-adapters         /hdmi-display-adapters/        301
+/category/usb-hubs-card-readers/*       /usb-hubs-card-readers/        301
+/category/usb-hubs-card-readers         /usb-hubs-card-readers/        301
+/category/microphones/*                 /microphones/                  301
+/category/microphones                   /microphones/                  301
+/category/live-streaming-photography/*  /live-streaming-photography/   301
+/category/live-streaming-photography    /live-streaming-photography/   301
+/category/phone-tablet-holders/*        /phone-tablet-holders/         301
+/category/phone-tablet-holders          /phone-tablet-holders/         301
+/category/phone-cases/*                 /phone-cases/                  301
+/category/phone-cases                   /phone-cases/                  301
+/category/screen-protectors/*           /screen-protectors/            301
+/category/screen-protectors             /screen-protectors/            301
+/category/computer-mice/*               /computer-mice/                301
+/category/computer-mice                 /computer-mice/                301
+/category/keyboards-input-devices/*     /keyboards-input-devices/      301
+/category/keyboards-input-devices       /keyboards-input-devices/      301
+/category/gaming-accessories/*          /gaming-accessories/           301
+/category/gaming-accessories            /gaming-accessories/           301
+/category/laptop-desk-accessories/*     /laptop-desk-accessories/      301
+/category/laptop-desk-accessories       /laptop-desk-accessories/      301
+/category/smart-watches/*               /smart-watches/                301
+/category/smart-watches                 /smart-watches/                301
+/category/fans-cooling/*                /fans-cooling/                 301
+/category/fans-cooling                  /fans-cooling/                 301
+/category/mobile-wifi/*                 /mobile-wifi/                  301
+/category/mobile-wifi                   /mobile-wifi/                  301
+/category/network-cables/*              /network-cables/               301
+/category/network-cables                /network-cables/               301
+/category/personal-care/*               /personal-care/                301
+/category/personal-care                 /personal-care/                301
+
+# ── Legacy .html extension → clean trailing-slash URL ────────
+/index.html     /           301
+/about.html     /about/     301
+/contact.html   /contact/   301
+/delivery.html  /delivery/  301
+/privacy.html   /privacy/   301
+/terms.html     /terms/     301
+/brands.html    /brands/    301
+
+# ── 404 fallback ─────────────────────────────────────────────
+/*  /404.html  404

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /404
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+Sitemap: https://www.advancestore.co.uk/sitemap.xml
